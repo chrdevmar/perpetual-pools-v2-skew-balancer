@@ -1,0 +1,6 @@
+build
+.tmp
+node_modules
+.env*
+.secrets*
+deployment/output
