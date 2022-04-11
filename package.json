@@ -21,6 +21,8 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "@tracer-protocol/perpetual-pools-contracts": "^1.1.2",
+    "@tracer-protocol/perpetual-pools-v2-pool-watcher": "^0.0.9",
     "@tracer-protocol/pools-js": "^2.0.3",
     "dotenv": "^10.0.0",
     "eslint-config-standard-with-typescript": "^20.0.0",

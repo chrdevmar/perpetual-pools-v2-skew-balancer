@@ -1348,6 +1348,21 @@
   resolved "https://registry.yarnpkg.com/@tracer-protocol/perpetual-pools-contracts/-/perpetual-pools-contracts-1.0.2.tgz#e05a23bf6f919fc2aae47e1fd56dec9cf5698f28"
   integrity sha512-/AMXMwUkvTRWIUtp/sX/aObzhpTe1P0ThisvWqXovTj32eCneP6DAf+1Hq9ewlMQzTLpwN6Ns7RRIyYuEfDAmA==
 
+"@tracer-protocol/perpetual-pools-contracts@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/@tracer-protocol/perpetual-pools-contracts/-/perpetual-pools-contracts-1.1.2.tgz#7bccd91476f1e271f3ee518c8fd84725ef4fbc16"
+  integrity sha512-KFnlh6jOOlpgLWgVg2pChKP2sHGZ3oBTO5yh4Dfcx2Q7foxA/9qr2M0dt0IZICHIxfcLZcaxHAmiCKKOC6HBEw==
+
+"@tracer-protocol/perpetual-pools-v2-pool-watcher@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/@tracer-protocol/perpetual-pools-v2-pool-watcher/-/perpetual-pools-v2-pool-watcher-0.0.9.tgz#6ab9958d605d81d7aa6bba261065519377cd1b9e"
+  integrity sha512-EJXL6N4mAI9dbqT77ghTj3soiqb+2VRvVB3v8tNnZSplaT39jDUUXx81AIicAuuevju6Ka/TQ/3DfOxVQrkZXw==
+  dependencies:
+    "@tracer-protocol/perpetual-pools-contracts" "^1.1.2"
+    "@tracer-protocol/pools-js" "^2.0.3"
+    ethers "5.5.1"
+    tiny-typed-emitter "^2.1.0"
+
 "@tracer-protocol/pools-js@^2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@tracer-protocol/pools-js/-/pools-js-2.0.3.tgz#8bc7f23535ffb504241f31c600571fd5605064f3"
@@ -3169,6 +3184,11 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+tiny-typed-emitter@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/tiny-typed-emitter/-/tiny-typed-emitter-2.1.0.tgz#b3b027fdd389ff81a152c8e847ee2f5be9fad7b5"
+  integrity sha512-qVtvMxeXbVej0cQWKqVSSAHmKZEHAvxdF8HEUBFWts8h+xEo5m/lEiPakuyZ3BnCBjOD8i24kzNOiOLLgsSxhA==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
