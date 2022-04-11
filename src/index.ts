@@ -10,8 +10,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const link3 = new SkewBalancer({
@@ -20,8 +20,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const btc3 = new SkewBalancer({
@@ -30,8 +30,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const eth5 = new SkewBalancer({
@@ -40,8 +40,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const link5 = new SkewBalancer({
@@ -50,8 +50,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const btc5 = new SkewBalancer({
@@ -60,8 +60,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const eth7 = new SkewBalancer({
@@ -70,8 +70,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const link7 = new SkewBalancer({
@@ -80,8 +80,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   const btc7 = new SkewBalancer({
@@ -90,8 +90,8 @@ async function main () {
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 15, // perform commits 15 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.01
+    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
+    skewDeviationThreshold: 0.05
   });
 
   await eth3.initialise();
