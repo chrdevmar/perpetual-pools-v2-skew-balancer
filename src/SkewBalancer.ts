@@ -192,13 +192,14 @@ export class SkewBalancer {
           payForClaim: false
         };
       } else if (balances.settlementTokenAggregateBalance.gte(collateralDiff)) {
+        // TODO: uncomment, long mint from aggregate currently has a bug
         // resort to minting
-        return {
-          commitType: COMMIT_TYPES.LongMint,
-          amount: collateralDiff.toFixed(0),
-          fromAggregateBalance: true,
-          payForClaim: false
-        };
+        // return {
+        //   commitType: COMMIT_TYPES.LongMint,
+        //   amount: collateralDiff.toFixed(0),
+        //   fromAggregateBalance: true,
+        //   payForClaim: false
+        // };
       } else if (balances.settlementTokenBalance.gte(collateralDiff)) {
         // resort to minting
         return {
