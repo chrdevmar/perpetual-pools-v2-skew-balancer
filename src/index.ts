@@ -6,17 +6,7 @@ dotenv.config();
 async function main () {
   const eth3 = new SkewBalancer({
     privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0xC2CA40ED6E079dAcfDdC6F2E227ae657D5b81e9A',
-    chainId: '421611',
-    nodeUrl: process.env.NODE_URL as string,
-    gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.05
-  });
-
-  const link3 = new SkewBalancer({
-    privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0xb3a4b189a489780EaC5b076DDef6ab088c9951e0',
+    poolAddress: '0x5c117522c6be2846f92943e54670474f3cb5ad9e',
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
@@ -26,7 +16,7 @@ async function main () {
 
   const btc3 = new SkewBalancer({
     privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0x945DB8dF0597273D6d4d2B1e5442019f52e069fE',
+    poolAddress: '0x909f7e70068d0dc55d9c615b3c5ea84929e7687a',
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
@@ -34,9 +24,9 @@ async function main () {
     skewDeviationThreshold: 0.05
   });
 
-  const eth5 = new SkewBalancer({
+  const eth4 = new SkewBalancer({
     privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0x0945639d1123b2d7783363967d9AB58Ceeb2bE89',
+    poolAddress: '0x2865802681f6f25d43bac9fe60e6295a595d21c0',
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
@@ -44,49 +34,9 @@ async function main () {
     skewDeviationThreshold: 0.05
   });
 
-  const link5 = new SkewBalancer({
+  const btc4 = new SkewBalancer({
     privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0xb2AD33cE1FEcF7ebA71425198afBeB86D5225e42',
-    chainId: '421611',
-    nodeUrl: process.env.NODE_URL as string,
-    gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.05
-  });
-
-  const btc5 = new SkewBalancer({
-    privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0x783aa1F06B0f16674DCC226e51Cf93ec3a4e8e85',
-    chainId: '421611',
-    nodeUrl: process.env.NODE_URL as string,
-    gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.05
-  });
-
-  const eth7 = new SkewBalancer({
-    privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0x8155a758a06E7e385191C119D35195Aa743cBe9f',
-    chainId: '421611',
-    nodeUrl: process.env.NODE_URL as string,
-    gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.05
-  });
-
-  const link7 = new SkewBalancer({
-    privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0x80160C3Dd85890C4E5B8C90746a9FD8608465325',
-    chainId: '421611',
-    nodeUrl: process.env.NODE_URL as string,
-    gasLimit: Number(process.env.GAS_LIMIT || 5000000),
-    commitmentWindowBuffer: 30, // perform commits 30 seconds before the end of the commitment window
-    skewDeviationThreshold: 0.05
-  });
-
-  const btc7 = new SkewBalancer({
-    privateKey: process.env.PRIVATE_KEY as string,
-    poolAddress: '0x925070199FD201FFB473b023407c923B61071673',
+    poolAddress: '0x9b106bf5e584b65156097c3542b0501f1f22854d',
     chainId: '421611',
     nodeUrl: process.env.NODE_URL as string,
     gasLimit: Number(process.env.GAS_LIMIT || 5000000),
@@ -95,28 +45,14 @@ async function main () {
   });
 
   await eth3.initialise();
-  await link3.initialise();
   await btc3.initialise();
-
-  await eth5.initialise();
-  await link5.initialise();
-  await btc5.initialise();
-
-  await eth7.initialise();
-  await link7.initialise();
-  await btc7.initialise();
+  await eth4.initialise();
+  await btc4.initialise();
 
   eth3.startSkewBalancing();
-  link3.startSkewBalancing();
   btc3.startSkewBalancing();
-
-  eth5.startSkewBalancing();
-  link5.startSkewBalancing();
-  btc5.startSkewBalancing();
-
-  eth7.startSkewBalancing();
-  link7.startSkewBalancing();
-  btc7.startSkewBalancing();
+  eth4.startSkewBalancing();
+  btc4.startSkewBalancing();
 }
 
 main();
