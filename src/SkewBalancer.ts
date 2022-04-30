@@ -1,5 +1,8 @@
 import { ethers } from 'ethers';
 import BigNumber from 'bignumber.js';
+
+import { calcPoolStatePreview } from '@tracer-protocol/pools-js';
+
 import {
   PoolWatcher,
   ExpectedPoolState,
@@ -258,8 +261,8 @@ export class SkewBalancer {
         }
       });
 
-      const expectedStateInputs = await this.poolWatcher.getExpectedStateInputs();
-      const expectedState = this.poolWatcher.calculatePoolState(expectedStateInputs);
+      const expectedStateInputs = await this.poolWatcher.getPoolStatePreviewInputs();
+      const expectedState = calcPoolStatePreview(expectedStateInputs);
 
       console.log('EXPECTED STATE AFTER COMMIT IS ', JSON.stringify(stringifyBNProperties(expectedState), null, 2));
 
