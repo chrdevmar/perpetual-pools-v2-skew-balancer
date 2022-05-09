@@ -1,6 +1,7 @@
 # Perpetual Pools v2 Keeper Bot
 
-Typescript implementation of a keeper bot for Tracer Perpetual Pools v2.
+Typescript implementation of a sample bot built on top of Tracer Perpetual Pools V2
+This bot makes use of [The Perpetual Pools V2 Pool Watcher](https://github.com/tracer-protocol/perpetual-pools-v2-pool-watcher) to handle watching the pool and calculating the expected pool state
 
 ## Running
 
