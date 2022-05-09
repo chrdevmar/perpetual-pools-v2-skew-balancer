@@ -1,12 +1,15 @@
 import { ethers } from 'ethers';
 import BigNumber from 'bignumber.js';
 
-import { calcPoolStatePreview } from '@tracer-protocol/pools-js';
+import {
+  calcPoolStatePreview,
+  attemptPromiseRecursively,
+  ethersBNtoBN
+} from '@tracer-protocol/pools-js';
 
 import {
   PoolWatcher,
-  ExpectedPoolState,
-  attemptPromiseRecursively
+  ExpectedPoolState
 } from '@tracer-protocol/perpetual-pools-v2-pool-watcher';
 
 import {
@@ -15,7 +18,6 @@ import {
 } from '@tracer-protocol/perpetual-pools-contracts/types';
 
 import {
-  ethersBNtoBN,
   COMMIT_TYPES,
   CommitTypeValues,
   encodeCommitArgs,
@@ -195,14 +197,13 @@ export class SkewBalancer {
           payForClaim: false
         };
       } else if (balances.settlementTokenAggregateBalance.gte(collateralDiff)) {
-        // TODO: uncomment, long mint from aggregate currently has a bug
         // resort to minting
-        // return {
-        //   commitType: COMMIT_TYPES.LongMint,
-        //   amount: collateralDiff.toFixed(0),
-        //   fromAggregateBalance: true,
-        //   payForClaim: false
-        // };
+        return {
+          commitType: COMMIT_TYPES.LongMint,
+          amount: collateralDiff.toFixed(0),
+          fromAggregateBalance: true,
+          payForClaim: false
+        };
       } else if (balances.settlementTokenBalance.gte(collateralDiff)) {
         // resort to minting
         return {
