@@ -1,4 +1,4 @@
-# Perpetual Pools v2 Keeper Bot
+# Perpetual Pools v2 Skew Balancer Bot
 
 Typescript implementation of a sample bot built on top of Tracer Perpetual Pools V2.
 
